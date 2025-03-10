@@ -1,0 +1,9 @@
+.item__image {
+    border-radius: var(--space-100);
+    border: 2px solid transparent;
+    transition: border-color 300ms ease-in;
+}
+  
+.item__image--border {
+    border-color: var(--red);
+}
