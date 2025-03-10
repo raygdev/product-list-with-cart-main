@@ -27,15 +27,22 @@
     padding: .78125rem 1.75rem;
     cursor: pointer;
     align-items: center;
+    grid-area: stack;
+}
+
+.item__button[aria-hidden='true'] {
+    visibility: hidden;
 }
 
 .item__button-container {
-    margin-top: -1.5rem;
+    margin-top: -1.75rem;
     place-self: center;
     border-radius: 5rem;
     overflow: hidden;
     border: var(--rose-400) 1px solid;
-    transition: border-color 300ms ease-in-out
+    transition: border-color 300ms ease-in-out;
+    display: grid;
+    grid-template-areas: "stack";
 }
 
 .item__button-container--cart-item {
@@ -43,7 +50,12 @@
     justify-content: space-between;
     background-color: var(--red);
     padding: var(--space-150);
-    gap: 2.6875rem
+    gap: 2.6875rem;
+    grid-area: stack;
+}
+
+.item__button-container--cart-item[aria-hidden='true'] {
+    visibility: hidden;
 }
 
 
