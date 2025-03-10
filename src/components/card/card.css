@@ -6,6 +6,12 @@
 
 .item__image {
   border-radius: var(--space-100);
+  border: 2px solid transparent;
+  transition: border-color 300ms ease-in;
+}
+
+.item__image--border {
+    border-color: var(--red);
 }
 
 .item__container {
@@ -41,6 +47,28 @@
     border: var(--rose-400) 1px solid;
     transition: border-color 300ms ease-in-out
 }
+
+.item__button-container--cart-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--red);
+    padding: var(--space-150);
+    gap: 2.6875rem
+}
+
+
+.decrement,
+.increment {
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.quantity {
+    color: white;
+}
+
 
 .item__button-container:has(.item__button--add-to-cart:hover) {
     border: var(--red) 1px solid
