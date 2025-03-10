@@ -14,11 +14,11 @@ const DessertsSection = () => {
   }
   return (
     <section aria-labelledby="dessert-section">
-        <h1 id="dessert-section">Desserts</h1>
-        <ul role='list'>
-        {desserts?.map(dessert => {
+        <h1 id="dessert-section" className="text-1-bold">Desserts</h1>
+        <ul role='list' className="list">
+        {desserts?.map((dessert, index) => {
           return (
-            <Card image={dessert.image} dessert={dessert} />
+            <Card key={index} image={dessert.image} dessert={dessert} index={index} />
           )
         })}
       </ul>
