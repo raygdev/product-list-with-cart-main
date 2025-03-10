@@ -5,12 +5,12 @@ const Card = ({ dessert, image, index }) => {
     <li className='item'>
         <div className="item__container">
             <picture className='item__image'>
-                {images.map(src => {
+                {images.map((src, index) => {
                     if(src === 'mobile') {
-                        return <img className='item__image' src={image[src].src} alt={dessert.name} />
+                        return <img key={index} className='item__image' src={image[src].src} alt={dessert.name} />
                     }
 
-                    return <source media={`(min-width: ${image[src].minWidth})`} srcset={image[src].src} />
+                    return <source key={index} media={`(min-width: ${image[src].minWidth})`} srcSet={image[src].src} />
                 })}
             </picture>
             <div className='item__button-container'>
