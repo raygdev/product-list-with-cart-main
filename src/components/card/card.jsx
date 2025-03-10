@@ -14,15 +14,15 @@ const Card = ({ dessert, image, index }) => {
                 })}
             </picture>
             <div className='item__button-container'>
-                <button className='item__button item__button--add-to-cart'>
+                <button onClick={() => console.log(index)} className='item__button item__button--add-to-cart text-4-semibold'>
                     <img aria-hidden='true' src="/assets/images/icon-add-to-cart.svg" alt="" />
                     Add to cart
                 </button>
             </div>
             <div className='item__info-container'>
-                <p className='item__info-category'>{dessert.category}</p>
-                <p className='item__info-title'>{dessert.name}</p>
-                <p className='item__info-price'>${dessert.price.toPrecision(3)}</p>
+                <p className='item__info-category text-4-regular'>{dessert.category}</p>
+                <p className='item__info-title text-3-semibold'>{dessert.name}</p>
+                <p className='item__info-price text-3-semibold'>${dessert.price.toPrecision(3)}</p>
             </div>
         </div>
     </li>
