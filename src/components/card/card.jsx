@@ -1,7 +1,7 @@
+import Picture from '../picture/picture'
 import { useCart } from '../../hooks/useCart'
 import './card.css'
 const Card = ({ dessert, image, index }) => {
-  const images = Object.keys(image).filter((key) => key !== 'thumbnail').reverse()
   const { cart, increaseQuantity, decreaseQuantity, addToCart } = useCart()
   const itemInCart = cart.find(item => item.id === index)
   const quantity = itemInCart?.quantity
@@ -16,15 +16,7 @@ const Card = ({ dessert, image, index }) => {
   return (
     <li className='item'>
         <div className="item__container">
-            <picture className={`item__image ${itemInCart && 'item__image--border'}`}>
-                {images.map((src, index) => {
-                    if(src === 'mobile') {
-                        return <img key={index} className='item__image' src={image[src].src} alt={dessert.name} />
-                    }
-
-                    return <source key={index} media={`(min-width: ${image[src].minWidth})`} srcSet={image[src].src} />
-                })}
-            </picture>
+            <Picture name={dessert.name} image={image} itemInCart={itemInCart} />
             <div className='item__button-container'>
                 { !quantity ? (
                   <button 
