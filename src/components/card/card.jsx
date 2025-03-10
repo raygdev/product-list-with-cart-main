@@ -1,7 +1,6 @@
 import './card.css'
 const Card = ({ dessert, image, index }) => {
   const images = Object.keys(image).filter((key) => key !== 'thumbnail').reverse()
-  console.log(images)
   return (
     <li className='item'>
         <div className="item__container">
