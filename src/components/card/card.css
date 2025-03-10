@@ -15,7 +15,11 @@
 }
 
 .item__button--add-to-cart {
-  
+  transition: color 300ms ease-in-out;
+}
+
+.item__button--add-to-cart:hover {
+    color: var(--red);
 }
 
 .item__button {
@@ -26,6 +30,7 @@
     gap: var(--space-100);
     padding: .78125rem 1.75rem;
     cursor: pointer;
+    align-items: center;
 }
 
 .item__button-container {
@@ -34,7 +39,7 @@
     border-radius: 5rem;
     overflow: hidden;
     border: var(--rose-400) 1px solid;
-    transition: border-color 350ms ease-in-out
+    transition: border-color 300ms ease-in-out
 }
 
 .item__button-container:has(.item__button--add-to-cart:hover) {
