@@ -80,7 +80,8 @@
     display: flex;
     flex-direction: column;
     padding-top: var(--space-200);
-    gap: var(--space-50)
+    gap: var(--space-50);
+    order: 1;
 }
 
 [class*='item__info-'] {
@@ -89,12 +90,15 @@
 
 .item__info-category {
   color: var(--rose-500);
+  order: 1;
 }
 
 .item__info-title {
   color: var(--rose-900);
+  order: 2;
 }
 
 .item__info-price {
   color: var(--red);
+  order: 3;
 }
