@@ -1,14 +1,15 @@
 import DessertsSection from './components/desserts-section/desserts-section'
+import ShoppingCart from './components/cart/shopping-cart'
+import ShoppingCartProvider from './context/cart-provider'
 import './App.css'
 
 function App() {
   return (
     <main>
-      <DessertsSection />
-      <section>
-        <h2>Some Shopping Cart</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore impedit non dolor praesentium qui earum in reiciendis sunt consequatur adipisci?</p>
-      </section>
+      <ShoppingCartProvider>
+        <DessertsSection />
+        <ShoppingCart/>
+      </ShoppingCartProvider>
     </main>
   )
 }
