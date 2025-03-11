@@ -35,8 +35,14 @@ export default function ShoppingCartProvider ({ children }) {
         })
     }
 
+    function removeItem(id) {
+        setCart(oldCart => {
+            return oldCart.filter(item => item.id !== id)
+        })
+    }
+
     return (
-        <ShoppingCartContext.Provider value={{ addToCart, cart, increaseQuantity, decreaseQuantity }}>
+        <ShoppingCartContext.Provider value={{ addToCart, cart, increaseQuantity, decreaseQuantity, removeItem }}>
             {children}
         </ShoppingCartContext.Provider>
     )
