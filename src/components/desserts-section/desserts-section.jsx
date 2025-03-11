@@ -1,7 +1,6 @@
 import Card from "../card/card";
 import { useRecipes } from "../../hooks/useRecipes";
 import "./dessert-section.css"
-import ShoppingCartProvider from "../../context/cart-provider";
 
 const DessertsSection = () => {
   const { desserts, loading, error } = useRecipes()
@@ -16,7 +15,6 @@ const DessertsSection = () => {
   return (
     <section aria-labelledby="dessert-section">
         <h1 id="dessert-section" className="text-1-bold">Desserts</h1>
-        <ShoppingCartProvider>
             <ul role='list' className="list">
                 {desserts?.map((dessert, index) => {
                 return (
@@ -24,7 +22,6 @@ const DessertsSection = () => {
                 )
                 })}
             </ul>
-        </ShoppingCartProvider>
     </section>
   )
 }
