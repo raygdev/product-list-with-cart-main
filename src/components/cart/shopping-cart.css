@@ -1,0 +1,29 @@
+.cart {
+    flex-grow: 1;
+}
+
+.cart-title {
+    color: var(--red);
+    margin-top: 0;
+}
+
+.cart-container {
+ background-color: white;
+ padding: var(--space-300);
+ border-radius: .75rem;
+}
+
+.cart-container--empty {
+ background-image: url('/assets/images/illustration-empty-cart.svg');
+ background-position: center;
+ background-repeat: no-repeat;
+ padding-top: 11.1875rem;
+ padding-bottom: 1rem;
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+}
+
+.cart-container--empty > p {
+    color: var(--rose-500);
+}
